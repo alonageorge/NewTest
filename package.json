@@ -58,20 +58,12 @@
   },
   "scripts": {
     "dev:tailwind": "tailwindcss -i src/styles/tailwind.css -o src/styles/index.css -w",
-    "dev:react": "env-cmd -f ./.env.test react-scripts start",
+    "dev:react": "env-cmd -f ./.env.development react-scripts start",
     "start": "npm-run-all --parallel dev:*",
-    "build": "env-cmd -f ./.env.test react-scripts build",
+    "build": "env-cmd -f ./.env.development react-scripts build",
     "build:dev": "env-cmd -f ./.env.development react-scripts build",
     "build_test_env": "env-cmd -f ./.env.test react-scripts build",
-    "test": "react-scripts test",
-    "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
-    "eject": "react-scripts eject",
-    "typescript": "tsc --project tsconfig.json --noEmit",
-    "lint": "eslint src --color",
-    "prettier": "prettier src --check",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint-staged": "lint-staged --config lint-staged.js",
-    "husky-install": "cd .. && husky install web/.husky",
+    
     "start-auth": "node server.js"
   },
   "eslintConfig": {
