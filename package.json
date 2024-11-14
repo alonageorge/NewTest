@@ -58,9 +58,9 @@
   },
   "scripts": {
     "dev:tailwind": "tailwindcss -i src/styles/tailwind.css -o src/styles/index.css -w",
-    "dev:react": "env-cmd -f ./.env react-scripts start",
+    "dev:react": "env-cmd -f ./.env.test react-scripts start",
     "start": "npm-run-all --parallel dev:*",
-    "build": "env-cmd -f ./.env react-scripts build",
+    "build": "env-cmd -f ./.env.test react-scripts build",
     "build:dev": "env-cmd -f ./.env.development react-scripts build",
     "build_test_env": "env-cmd -f ./.env.test react-scripts build",
     "test": "react-scripts test",
